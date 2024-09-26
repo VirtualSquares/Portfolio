@@ -1,2 +1,2 @@
 # VirtualSquares.github.io
-Portfolio Website; Will continuously be updated
+Personal/Portfolio Website; Will continuously be updated
