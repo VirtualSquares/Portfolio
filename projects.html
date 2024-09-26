@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="css/projects.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="nav">
+        <div style="font-size: 24px; font-weight: bold;">Shravan Sithambaram</div>
+        <div>
+            <p style="display: inline; margin-right: 15px; cursor: pointer;" onclick="location.href='index.html'">Home</p>
+            <p style="display: inline; margin-right: 15px; cursor: pointer;">Projects</p>
+        </div>
+    </div>
+
+    <h1 style="text-align: center; font-size: 60px;">Projects</h1>
+
+    <div class="boxes" style="margin: 3%;">
+        <div class="box" onclick="showModal('Actionize')">
+            <h2 style="text-align: center;">Actionize</h2>
+            <a style="color: white; text-align: center;" href="https://github.com/VirtualSquares/Actionize">Github Repo</a>
+            <a style="color: white; text-align: center;" href="https://actionize.netlify.app">Project Link</a>
+            <img src="https://cdn-aicin.nitrocdn.com/HIAjYmsdLpRQdKpIMJLXFmZsSAYnEnkl/assets/images/optimized/rev-86c0feb/www.amitree.com/wp-content/uploads/2021/08/the-pros-and-cons-of-paper-to-do-lists.jpeg" alt="...">
+        </div>
+    
+        <div class="box" onclick="showModal('Sky Signal')">
+            <h2 style="text-align: center;">Sky Signal</h2>
+            <a style="color: white; text-align: center;" href="https://github.com/VirtualSquares/skysignal">Github Repo</a>
+            <a style="color: white; text-align: center;" href="https://skysignal.netlify.app">Project Link</a>
+            <img src="https://play-lh.googleusercontent.com/pCQw51XRP4UPr-FCYDjvNnEpFa0HDGJjjLDldN3rmw4KkwhqPu0PZXE8EopmAxzH9mQ=w240-h480" alt="...">
+        </div>
+    
+        <div class="box" onclick="showModal('Lunarize')">
+            <h2 style="text-align: center;">Lunarize</h2>
+            <a style="color: white; text-align: center;" href="https://github.com/VirtualSquares/Lunarize">Github Repo</a>
+            <p style="color: white; text-align: center;">Project Link Unavailable</p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/FullMoon2010.jpg" alt="...">
+        </div>
+    </div>
+    
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p id="modal-text"></p>
+        </div>
+    </div>
+
+    <script src="js/about.js"></script>
+    <script>
+        const projectDescriptions = {
+            "Actionize": "Actionize is a productivity tool that helps you manage tasks and improve your workflow efficiently.",
+            "Sky Signal": "Sky Signal is an innovative app that provides real-time weather updates and alerts for your location.",
+            "Lunarize" : "Lunarize was my submission for the 2024 September Youngwonks hackathon, following the theme of space",
+            "about": "I’m Shravan Sithambaram, a 14-year-old freshman with a passion for coding, math, and badminton. One of my favorite aspects of math is competition math; I thrive on tackling challenging problems and participating in contests that push my limits. Preparing for these competitions has taught me valuable problem-solving strategies and helped me think outside the box. Alongside my love for math, I'm also interested in entrepreneurship. I enjoy brainstorming ideas for innovative projects and thinking about how I could turn them into real businesses one day. Coding plays a big role in this for me, as I love creating apps and websites that could potentially solve everyday problems. When I'm not immersed in numbers or entrepreneurial projects, you can find me on the badminton court, enjoying the excitement of competition and teamwork. Balancing my academic interests with my extracurricular activities, I’m determined to make the most of my high school experience while pursuing my passions in math, coding, and entrepreneurship."
+        };
+
+        function showModal(name) {
+            document.getElementById('modal-text').innerText = projectDescriptions[name];
+            document.getElementById('myModal').style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById('myModal').style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == document.getElementById('myModal')) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+
+</html>
